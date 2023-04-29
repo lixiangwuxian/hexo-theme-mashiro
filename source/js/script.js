@@ -55,7 +55,7 @@
   for (var i = 0; i < codes.length; ++i) {
     var copy_button = document.createElement('div');
     copy_button.className = "copy-button";
-    copy_button.innerHTML = "Copy";
+    copy_button.innerHTML = "复制";
     new ClipboardJS('.copy-button', {
       target: (trigger) => {
         return trigger.nextSibling;
@@ -63,10 +63,10 @@
     });
     copy_button.onclick = (e) => {
       var btn = e.target;
-      btn.innerHTML = "Copied!";
+      btn.innerHTML = "已复制!";
       setTimeout(function() {
-        btn.innerHTML = "Copy";
-      }, 1000);
+        btn.innerHTML = "复制";
+      }, 700);
     }
     codes[i].parentElement.insertBefore(copy_button, codes[i]);
   }
