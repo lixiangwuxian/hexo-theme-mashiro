@@ -23,6 +23,7 @@
         <%- post.content %>
       <% } %>
     </div>
+    <div class="float-button" onclick=switch_dark_mode()></div>
     <footer class="article-footer">
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>

@@ -117,7 +117,27 @@ input, button
   src: url("fonts/biaodian.ttf");
 
 html
-  scroll-padding-top: 80px;
+  scroll-padding-top: 80px
+  transition: all 0.5s ease-in-out
+
+.dark
+  filter: invert(1) hue-rotate(180deg)
+
+.dark img
+  filter: invert(1) hue-rotate(180deg)
+
+img
+ transition: all 0.5s ease-in-out
+
+.float-button
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: 50px;
+  right: 50px;
+  background: #000000;
+  border-radius: 25px;
+  z-index:999;
 
 html, body, #container
   height: 100%

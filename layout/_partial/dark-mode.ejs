@@ -1,0 +1,9 @@
+<script>
+    const isDark= localStorage.getItem("isDarkMode");
+    if(isDark==="1"){
+      document.documentElement.classList.add('dark');
+    }else{
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script src="/scripts/dark_mode.js"></script>
