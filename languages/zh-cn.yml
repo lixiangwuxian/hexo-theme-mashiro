@@ -10,6 +10,7 @@ archive_a: 归档
 archive_b: 归档：%s
 page: 第 %d 页
 recent_posts: 最新文章
+random_posts: 随机文章
 newer: 新一篇
 older: 旧一篇
 share: 分享

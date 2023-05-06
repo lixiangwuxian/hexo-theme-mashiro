@@ -130,18 +130,21 @@ img
  transition: all 0.5s ease-in-out
 
 .float-button
+  transition: all 0.5s ease-in-out
   position: fixed;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   bottom: 50px;
   right: 50px;
   z-index:999;
-  background-image: url("/image/to_night.svg");
+  background: #292929;
+  background-image: url("/image/day_and_night.svg");
+  background-position: 0px 60px;
   background-size: cover;
-  border-radius: 25px;
+  border-radius: 40%;
 
 .dark .float-button
-  background-image: url("/image/to_day.svg");
+  background-position: 0px 0px;
 
 
 html, body, #container
