@@ -60,6 +60,8 @@
       target: (trigger) => {
         return trigger.nextSibling;
       }
+    }).on('success', function(e) {
+      e.clearSelection();
     });
     copy_button.onclick = (e) => {
       var btn = e.target;
