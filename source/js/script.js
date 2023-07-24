@@ -72,5 +72,4 @@
     }
     codes[i].parentElement.insertBefore(copy_button, codes[i]);
   }
-
 })(jQuery);

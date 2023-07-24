@@ -164,11 +164,15 @@ if (hexo-config("title-number") == "config")
     position: absolute
     right: 15px
     top: 15px
-    background: #fff
+    // background: #fff
+    background: transparent;
     border: 2px solid color-border
     padding: 0px 5px
-    transition: opacity 0.2s
+    // transition: opacity 0.2s
+    transition: .2s ease-in-out
   .copy-button:hover
+    // -webkit-transform: translateX(-101%)
+    // transform: translateX(-101%)
     cursor: pointer
   pre
     padding: 20px 0

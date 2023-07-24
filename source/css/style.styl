@@ -131,21 +131,34 @@ html
 
 .float-button
   transition: all 0.5s ease-in-out
-  position: fixed;
-  height: 60px;
-  width: 60px;
-  bottom: 50px;
-  right: 50px;
-  z-index:999;
-  background: #292929;
+  // position: fixed;
+  height: 18px;
+  width: 18px;
+  // bottom: 50px;
+  // right: 50px;
+  // z-index:999;
+  background: #fff;
   background-image: url("/image/day_and_night.svg");
-  background-position: 0px 60px;
+  background-position: 0px 18px;
   background-size: cover;
-  border-radius: 40%;
+  border-radius: 4%;
 
 .dark .float-button
   background-position: 0px 0px;
 
+.masked
+  transition: color 0.13s linear;
+  color: #252525;
+  text-shadow: none;
+  background-color: #252525;
+
+.masked:hover
+  color: #fff;
+  // text-shadow: 0 0 1px #fff;
+  // background-color: #252525;
+
+.readtime
+  color: #000
 
 html, body, #container
   height: 100%
