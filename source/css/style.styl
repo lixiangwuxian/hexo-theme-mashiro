@@ -227,6 +227,12 @@ html
   padding 5px
   margin-left 20px
   background #f1f1f1
+  border 2px solid #f1f1f1
+  transition border-color 0.3s, box-shadow 0.3s // 平滑过渡效果
+
+  // 高亮状态样式
+  &.highlight
+    border 2px solid #A6A6B0
 
   * 
     border none
@@ -239,6 +245,9 @@ html
     flex-grow 1
     font-size 16px
     background none
+    padding 7px
+    &:focus
+      outline: none;
 
   input[type="submit"]
     display none
@@ -248,6 +257,7 @@ html
     height 16px
     margin-left 8px
     padding-right 8px
+
 
 .readtime
   color: #000
