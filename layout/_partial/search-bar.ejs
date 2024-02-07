@@ -4,6 +4,7 @@
 </div>
 <script>
     //I love gpt4 ..
+    const currentDomain = window.location.hostname;
     const searchBox = document.getElementById('siteSearchBox');
     const searchInput = document.getElementById('siteSearchInput');
     const searchImg = document.getElementById('siteSearchIcon')
@@ -13,11 +14,11 @@
     searchInput.addEventListener('blur', () => searchBox.classList.remove('highlight'));
     searchInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-            window.open(`${searchEngine}?q=site:www.lxtend.com ${encodeURIComponent(searchInput.value)}`, '_blank');
+            window.open(`${searchEngine}?q=site:${encodeURIComponent(currentDomain)} ${encodeURIComponent(searchInput.value)}`, '_blank');
         }
     });
     searchImg.addEventListener('click', () => {
-        window.open(`${searchEngine}?q=site:www.lxtend.com ${encodeURIComponent(searchInput.value)}`, '_blank');
+        window.open(`${searchEngine}?q=site:${encodeURIComponent(currentDomain)} ${encodeURIComponent(searchInput.value)}`, '_blank');
     })
 
     fetch('https://www.google.com', { mode: 'no-cors' })
