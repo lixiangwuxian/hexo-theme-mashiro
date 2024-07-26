@@ -8,12 +8,24 @@
       <% } %>
         <%- partial('_partial/search-bar', null, {cache: !config.relative_link}) %>
           <div class="main-nav-space-between"></div>
+          <!-- <a id="light-btn" class="float-button" onclick="switch_dark_mode()" title="切换暗色模式"></a> -->
           <a id="light-btn" class="float-button" onclick="switch_dark_mode()" title="切换暗色模式"></a>
           <% if (theme.rss){ %>
             <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
             <% } %>
   </nav>
 </div>
+<script>
+    var light_btn = document.getElementById("light-btn");
+    var isNowDark = localStorage.getItem("isDarkMode");
+    if (isNowDark === "1") {
+      light_btn.innerText = "亮";
+      light_btn.title = "切换亮色模式";
+    } else {
+      light_btn.innerText = "暗";
+      light_btn.title = "切换暗色模式";
+    }
+</script>
 <div id="header-title">
   <h1 id="logo-wrap">
     <a href="<%- url_for() %>" id="logo">
