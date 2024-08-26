@@ -1,0 +1,31 @@
+<div id="siteSearchBox">
+    <img id="siteSearchIcon" src="/image/search_icon_light.png" alt="搜索" />
+    <input type="text" id="siteSearchInput" placeholder="搜索本站内容" />
+</div>
+<script>
+    //I love gpt4 ..
+    const currentDomain = window.location.hostname;
+    const searchBox = document.getElementById('siteSearchBox');
+    const searchInput = document.getElementById('siteSearchInput');
+    const searchImg = document.getElementById('siteSearchIcon')
+    let searchEngine = 'https://www.bing.com/search';
+
+    searchInput.addEventListener('focus', () => searchBox.classList.add('highlight'));
+    searchInput.addEventListener('blur', () => searchBox.classList.remove('highlight'));
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            window.open(`${searchEngine}?q=site:${encodeURIComponent(currentDomain)} ${encodeURIComponent(searchInput.value)}`, '_blank');
+        }
+    });
+    searchImg.addEventListener('click', () => {
+        window.open(`${searchEngine}?q=site:${encodeURIComponent(currentDomain)} ${encodeURIComponent(searchInput.value)}`, '_blank');
+    })
+
+    fetch('https://www.google.com', { mode: 'no-cors' })
+        .then(() => {
+            searchEngine = 'https://www.google.com/search';
+        })
+        .catch(() => {
+            console.error('Google is not accessible, keep using Bing search.');
+        });
+</script>
