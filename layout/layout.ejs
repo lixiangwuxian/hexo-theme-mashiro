@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <%- partial('_partial/dark-mode') %>
-<html>
-<%- partial('_partial/head') %>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-      <div id="content" class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null) %>
-        <% } %>
-      </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
-    </div>
-    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/after-footer') %>
-  </div>
-</body>
-</html>
+    <html>
+    <%- partial('_partial/head') %>
+        <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+
+        <body>
+            <div id="container">
+                <div id="wrap">
+                    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+                        <div id="content" class="outer">
+                            <section id="main">
+                                <%- body %>
+                            </section>
+                            <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+                                <%- partial('_partial/sidebar', null) %>
+                                    <% } %>
+                        </div>
+                        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+                </div>
+                <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+                    <%- partial('_partial/after-footer') %>
+            </div>
+        </body>
+
+    </html>
