@@ -3,9 +3,9 @@ function trans_punc(content) {
         return null;
     }
     // content = content.
-    //     replace(/([，；！：、？：）》」』】（《「『【。〈〉“”]+)/g, '<span class="bd-box">$1</span>').
-    //     replace(/(，|；|！|：|、|？|：|）|》|」|』|。|〉|】|”)/g, '<h-char class="bd bd-beg"><h-inner>$1</h-inner></h-char>').
-    //     replace(/(（|《|「|『|【|〈|“)/g, '<h-char class="bd bd-end"><h-inner>$1</h-inner></h-char>')
+    //     replace(/([，；！：、？：）》」』】（《「『【。〈〉""]+)/g, '<span class="bd-box">$1</span>').
+    //     replace(/(，|；|！|：|、|？|：|）|》|」|』|。|〉|】|")/g, '<h-char class="bd bd-beg"><h-inner>$1</h-inner></h-char>').
+    //     replace(/(（|《|「|『|【|〈|")/g, '<h-char class="bd bd-end"><h-inner>$1</h-inner></h-char>')
     //     ;
     return content;
 }
